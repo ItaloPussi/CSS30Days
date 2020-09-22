@@ -1,0 +1,50 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+
+.card-gallery{
+	position: relative;
+	display: inline-block;
+	width:200px;
+	overflow: hidden;
+	margin-top:-200px;
+}
+.card-gallery img{
+	clip-path: polygon(0 100%, 100% 100%, 100% 90%, 0 90%);
+	cursor:pointer;
+	filter:blur(4px);
+}
+
+.card-gallery img:not(:first-child){
+	margin-top: -345px;
+}
+.card-gallery img:hover{
+	clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 50%);
+	z-index: 500;
+	filter:blur(0);
+}
+
+/*------------------------------------------------------*/
+.depth-gallery {
+	position: relative;
+	display: inline-block;
+}
+
+.depth-gallery img{
+	border:solid 7px white;
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	cursor:pointer;
+	transition: filter 0.3s linear, transform 0.3s linear;
+}
+
+.depth-gallery:hover img{
+	filter:blur(5px);
+	transform: scale(0.9);
+}
+
+.depth-gallery img:hover{
+	transform: scale(1.1);
+	filter:blur(0)
+}
