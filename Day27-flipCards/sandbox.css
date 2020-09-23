@@ -1,0 +1,131 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+.frogCard-container{
+	width:350px;
+	height: 350px;
+	transform-style: preserve-3d;
+	transition: all 0.5s linear;
+	cursor:pointer;
+	position: relative;
+}
+
+.frogCard-container:hover{
+	transform:rotateY(180deg);
+}
+
+.back,
+.front{
+	position: absolute;
+	width:100%;
+	height:100%;
+}
+
+.back{
+	transform: rotateY(180deg)
+}
+
+.description{
+	color:white;
+	text-align: center;
+	width:80%;
+	margin-top:10%;
+}
+
+.frame{
+	width:350px;
+	height: 350px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:brown;
+	clip-path: polygon(0 40%, 50% 0, 100% 40%, 80% 100%, 20% 100%);
+}
+
+.paint{
+	width:330px;
+	height:330px;
+	background:black;
+	clip-path: polygon(0 40%, 50% 0, 100% 40%, 80% 100%, 20% 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.chair-frame{
+	width:210px;
+	height:270px;
+	background:white;
+	margin-top:30px;
+	clip-path: polygon(0 100%, 100% 100%, 100% 10%, 90% 10%, 90% 30%,55% 10%, 55% 0, 45% 0, 45% 10%,10% 30%, 10% 10%, 0 10%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.chair-frame img{
+	margin-left:auto;
+	margin-right:0;
+	display: block;
+	height: 100%;
+}
+
+
+/* --------------------------------------------*/
+.card-container{
+	width:200px;
+	height:300px;
+
+}
+
+.card{
+	width:100%;
+	height:100%;
+	transition: all 0.5s linear;
+	transform-style: preserve-3d;
+}
+
+	.card-container:hover .card{
+		transform:rotateY(180deg);
+	}
+
+
+
+.card figure{
+	width:100%;
+	height:100%;
+	position: absolute;
+	margin:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+
+}
+
+.card figure button{
+	cursor:pointer;
+	padding:10px 20px;
+	background-color:#1e1e1e;
+	border:none;
+	color:white;
+}
+.card .front{
+	background: rgb(83,83,200);
+	color:white;
+}
+
+.card .back{
+	background: rgb(75,170,173);
+	color:white;
+	transform:rotateY(180deg);
+}
