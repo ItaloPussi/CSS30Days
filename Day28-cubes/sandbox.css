@@ -1,0 +1,84 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+.sandbox .content section{
+	width:100%;
+	height:500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	perspective: 1000px;
+	perspective-origin: center;
+	background:linear-gradient(to right bottom, #00006b, #006586, #ffff98);
+}
+
+.cube{
+	position: relative;
+	transform-style: preserve-3d;
+	animation:cube-rotation 15s linear infinite;
+	height: 150px;
+	width:150px;
+}
+
+.top, .bottom, .right, .left, .front, .back{
+	position: absolute;
+	height:100%;
+	width:100%;
+	opacity: 0.6;
+
+	font-size:10vh;
+	font-weight: bold;
+
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+	.top{
+		background:blue;
+		transform:rotateX(90deg) translateZ(75px);
+	}
+
+	.bottom{
+		background:yellow;
+		transform:rotateX(90deg) translateZ(-75px);
+	}
+
+	.right{
+		background:green;
+		transform:rotateY(90deg) translateZ(75px);
+	}
+
+	.left{
+		background:red;
+		transform:rotateY(90deg) translateZ(-75px);
+	}
+
+	.front{
+		background:violet;
+		transform:rotateZ(90deg) translateZ(75px);
+	}
+
+	.back{
+		background:brown;
+		transform:rotateZ(90deg) translateZ(-75px);
+
+	}
+
+
+@keyframes cube-rotation{
+	0%{
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+	100%{
+		transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+	}
+}
